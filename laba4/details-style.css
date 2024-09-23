@@ -1,0 +1,57 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: rgb(229, 229, 221);
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+.container h2{
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 30px;
+}
+
+.shirt-card{
+    display: flex;
+    align-items: center;
+}
+.text-content{
+    margin-left: 20px;
+}
+.text-content h4{
+    font-size: 18px;
+    font-weight: 100;
+}
+.side-buttons::before{
+    content: 'Side:';
+    color:rgb(154, 151, 151); 
+    margin-right: 10px;
+}
+.side-buttons{
+    margin-bottom: 15px
+}
+.side-buttons button{
+    margin-right: 10px;
+    border: none;
+    color: aliceblue;
+    background-color: black;
+    border-radius: 10px;
+    width: 50px; 
+    height: 25px;
+}
+.color-buttons::before{
+    content: 'Color:';
+    color:rgb(154, 151, 151); 
+    margin-right: 10px;
+}
+.color-buttons button{
+    margin-right: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 50px; 
+    height: 25px;
+}
