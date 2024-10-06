@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="style.css" />
+    <script src = "index.js"></script>
+    <title>lab7</title>
+  </head>
+  <body>
+    <div class = 'container'>
+        <h1>Графический редактор</h1>
+        <div style = "margin-bottom: 20px;">
+            <label for="shape">Выберите фигуру:</label>
+            <select id="shape">
+             <option value="circle">Круг</option>
+             <option value="rectangle">Прямоугольник</option>
+             </select>
+             <button id = 'clear-btn'>Очистить поле</button>
+        </div>
+        <svg id="canvas" width="800" height="400" style = "border: 2px solid black"></svg>
+    </div>
+  </body>
+</html>
