@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('canvas');
     const context = canvas.getContext('2d');
     const shapeSelector = document.getElementById('shape');
+    const clearBtn = document.getElementById('clear-btn')
+
 
     let isDrawing = false;
     let startX, startY;
@@ -20,22 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const endX = event.offsetX;
         const endY = event.offsetY;
 
-    context.clearRect(0, 0, canvas.width, canvas.height);
-
     if (shape === 'circle') {
         const radius = Math.sqrt(Math.pow(endX - startX, 2) + Math.pow(endY - startY, 2));
         context.beginPath();
         context.arc(startX, startY, radius, 0, Math.PI * 2);
         context.fillStyle = 'pink'; 
         context.fill(); 
-        context.stroke();
         
     } else if (shape === 'rectangle') {
         const width = endX - startX;
         const height = endY - startY;
-        context.fillStyle = 'pink'; 
+        context.fillStyle = 'blue'; 
         context.fillRect(startX, startY, width, height); 
-        context.strokeRect(startX, startY, width, height);
        
     }
     });
@@ -45,4 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
     canvas.addEventListener('mouseleave', () => {
         isDrawing = false;
     });
+    clearBtn.addEventListener('click', ()=>{
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+    })
 })
